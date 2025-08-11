@@ -1,13 +1,10 @@
-// Type definitions for the shared notes service
-
 export interface Note {
   id: string;
   text: string;
   createdAt: Date;
 }
 
-// ## Shared service located in shared/shared-service.js ##
-
+// Accessed via window.sharedNotesService
 export interface SharedNotesService {
   getNotes(): Note[];
   addNote(text: string): void;
@@ -15,7 +12,6 @@ export interface SharedNotesService {
 }
 
 // Extend the Window interface
-//accessed via window.sharedNotesService
 declare global {
   interface Window {
     sharedNotesService: SharedNotesService;
