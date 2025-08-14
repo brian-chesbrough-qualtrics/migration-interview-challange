@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface NotesAppProps {}
 
 export const NotesApp: React.FC<NotesAppProps> = () => {
-  const [newNoteText, setNewNoteText] = useState('');
+  const [newNoteText, setNewNoteText] = useState("");
 
   // Test Access to Shared Service
-  console.log('notes', window.sharedNotesService.getNotes());
+  console.log("notes", window.sharedNotesService.getNotes());
 
   // TODO: Implement these functions
   const handleAddNote = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Add note clicked:', newNoteText);
+    console.log("Add note clicked:", newNoteText);
   };
 
   return (
@@ -38,4 +38,4 @@ export const NotesApp: React.FC<NotesAppProps> = () => {
       </div>
     </div>
   );
-}; 
+};
