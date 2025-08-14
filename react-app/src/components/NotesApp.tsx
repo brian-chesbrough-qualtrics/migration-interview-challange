@@ -5,6 +5,9 @@ interface NotesAppProps {}
 export const NotesApp: React.FC<NotesAppProps> = () => {
   const [newNoteText, setNewNoteText] = useState('');
 
+  // Test Access to Shared Service
+  console.log('notes', window.sharedNotesService.getNotes());
+
   // TODO: Implement these functions
   const handleAddNote = (e: React.FormEvent) => {
     e.preventDefault();
